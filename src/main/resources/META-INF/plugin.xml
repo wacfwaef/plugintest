@@ -4,6 +4,7 @@
     <vendor> </vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
@@ -12,7 +13,8 @@
     <actions>
         <!-- Add your actions here -->
 
-        <action id="actiona" class="actiona" text="Action" description="Action">
+        <!--<action id="actiona" class="actiona" text="Action" description="Action"> -->
+        <action id="actiona" class="myplugin.AnAction" text="Action" description="Action">
             <add-to-group group-id="ToolsMenu" anchor="first"/>
         </action>
     </actions>

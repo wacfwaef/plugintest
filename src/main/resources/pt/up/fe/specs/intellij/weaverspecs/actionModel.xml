@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<actions>
+
+	<!-- GLOBAL -->
+
+	<!-- Inserts node before the given node -->
+	<action name="insertBefore" return="joinpoint">
+		<parameter name="node" type="joinpoint" />
+	</action>
+
+	<!-- Overload which accepts String -->
+	<action name="insertBefore" return="joinpoint">
+		<parameter name="code" type="String" />
+	</action>
+
+	<!-- Inserts node after the given node -->
+	<action name="insertAfter" return="joinpoint">
+		<parameter name="node" type="joinpoint" />
+	</action>
+
+	<!-- Overload which accepts String -->
+	<action name="insertAfter" return="joinpoint">
+		<parameter name="code" type="String" />
+	</action>
+
+	<!-- Replaces join point with the given node -->
+	<action name="insertReplace" return="joinpoint">
+		<parameter name="jp" type="joinpoint" />
+	</action>
+	
+	<!-- Overload which accepts String -->
+	<action name="insertReplace" return="joinpoint">
+		<parameter name="code" type="String" />
+	</action>
+	
+	<!-- Copies the node and returns the copy -->
+	<action name="copy" return="joinpoint"/>
+
+	<!-- Deletes the node -->
+	<action name="remove"/>
+
+
+
+	<!-- APP, FILE -->
+	<action name="newClass" class="app,file" return="class">
+		<parameter name="name" type="String"/>
+		<parameter name="extend" type="String" default=""/>
+		<parameter name="implement" type="String[]" default="[]"/>
+	</action>
+		
+	
+	<!--  METHOD -->
+	<action name="setName" class="method" return="string" tooltip="Sets the name of this method, returns the previous name">
+		<parameter name="name" type="String"/>	
+	</action>
+
+	
+	
+	<!-- SCOPE -->
+	<action name="insertBegin" class="scope">
+		<parameter name="code" type="String"/>
+	</action>
+	
+	<action name="insertBegin" class="body">
+		<parameter name="statement" type="statement"/>
+	</action>	
+	
+	
+</actions>

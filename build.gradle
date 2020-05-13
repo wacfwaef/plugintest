@@ -3,17 +3,45 @@ plugins {
     id 'org.jetbrains.intellij' version '0.4.18'
 }
 
+intellij {
+    plugins 'java'
+}
+
 group 'org.example'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+sourceCompatibility =  11
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    //implementation fileTree(dir: 'libs', include: ['libs/*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //compile group: 'pt.up.fe.specs', name: 'lara-framework', version: '202003061350'
+    //compile group: 'pt.up.fe.specs', name: 'lara-framework', version: '202005132013'
+
+
+//    compile group: 'org.graalvm.truffle', name: 'truffle-api', version: '20.0.0'
+
+
+    compile group: 'org.graalvm.js', name: 'js', version: '20.0.0'
+    compile group: 'org.graalvm.js', name: 'js-scriptengine', version: '20.0.0'
+
+//    compile group: 'org.graalvm.truffle', name: 'truffle-nfi', version: '20.0.0'
+
+//    compile group: 'org.graalvm.sdk', name: 'graal-sdk', version: '20.0.0'
+    //testCompile fileTree(dir: 'libs', include: ['*.jar'])
+
+
+    //compile group: 'org.graalvm.truffle', name: 'truffle-api', version: '19.1.1'
+    //compile group: 'com.oracle.truffle', name: 'truffle-api', version: '1.0.0-rc7'
+//    compile group: 'org.graalvm.js', name: 'js', version: '19.1.1'
+//    compile group: 'org.graalvm.js', name: 'js-scriptengine', version: '19.1.1', conf: 'default'
+
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/

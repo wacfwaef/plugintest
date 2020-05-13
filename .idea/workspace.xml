@@ -1,7 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="66491e1d-407e-447d-8abc-58e6968a7b22" name="Default Changelist" comment="" />
+    <list default="true" id="66491e1d-407e-447d-8abc-58e6968a7b22" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/plugintest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/lara-framework-202005131644.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/myplugin/AnAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/PsiWeaver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/PsiWeaver.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/PsiWeaverGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/APsiWeaverJoinPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AConstructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AJoinPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AObjectType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AScope.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/weaver/APsiWeaver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/exceptions/PsiWeaverException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/runnable/MyRunnable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pt/up/fe/specs/intellij/weaverspecs/actionModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pt/up/fe/specs/intellij/weaverspecs/artifacts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pt/up/fe/specs/intellij/weaverspecs/joinPointModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/actiona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/actiona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +65,31 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="plugintest" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="plugintest" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -19,16 +97,75 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1awgESGmhjtRmN0q6Vul1ze5nhw" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/libs" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="myplugin" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.plugintest [runIde]">
+    <configuration name="PsiWeaver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pt.up.fe.specs.intellij.psiweaver.PsiWeaver" />
+      <module name="plugintest.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pt.up.fe.specs.intellij.psiweaver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PsiWeaverGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pt.up.fe.specs.intellij.psiweaver.PsiWeaverGenerator" />
+      <module name="plugintest.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pt.up.fe.specs.intellij.psiweaver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Plugin" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -48,18 +185,80 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+    <configuration name="plugintest [buildPlugin]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildPlugin" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="plugintest [prepareUiTestingSandbox]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="prepareUiTestingSandbox" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="plugintest [runIde]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="runIde" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.PsiWeaverGenerator" />
+      <item itemvalue="Application.PsiWeaver" />
+      <item itemvalue="Gradle.Plugin" />
+      <item itemvalue="Gradle.plugintest [prepareUiTestingSandbox]" />
+      <item itemvalue="Gradle.plugintest [runIde]" />
+      <item itemvalue="Gradle.plugintest [buildPlugin]" />
+    </list>
+    <recent_temporary>
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <item itemvalue="Gradle.plugintest [runIde]" />
+        <item itemvalue="Gradle.plugintest [buildPlugin]" />
+        <item itemvalue="Application.PsiWeaver" />
+        <item itemvalue="Application.PsiWeaverGenerator" />
+        <item itemvalue="Gradle.plugintest [prepareUiTestingSandbox]" />
       </list>
-    </option>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -71,13 +270,105 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587651957898</updated>
+      <workItem from="1587723568377" duration="939000" />
+      <workItem from="1587724527848" duration="406000" />
+      <workItem from="1588427698283" duration="4000" />
+      <workItem from="1588951171768" duration="5637000" />
+      <workItem from="1588956825272" duration="1312000" />
+      <workItem from="1588958149827" duration="2965000" />
+      <workItem from="1588966572286" duration="5538000" />
+      <workItem from="1588987814549" duration="458000" />
+      <workItem from="1589125889211" duration="647000" />
+      <workItem from="1589212059616" duration="517000" />
+      <workItem from="1589379809563" duration="2838000" />
+      <workItem from="1589384045937" duration="13706000" />
+      <workItem from="1589408071020" duration="748000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#Project_Structure" timestamp="1588952697729">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1588952697729" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587726231278">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1587726231278" />
     <state x="488" y="93" key="#com.intellij.ide.util.MemberChooser" timestamp="1587652116407">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="488" y="93" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1587652116407" />
+    <state x="577" y="162" width="438" height="494" key="FileChooserDialogImpl" timestamp="1588966348682">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="577" y="162" width="438" height="494" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588966348682" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1589407894640">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589407894640" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1589407894640">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589407894640" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1589407894640">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589407894640" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1589407894640">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589407894640" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1588966560721">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588966560721" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1588966560721">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588966560721" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1588966560721">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588966560721" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1588966560721">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588966560721" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1589407885340">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589407885340" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588966585022">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588966585022" />
+    <state x="499" y="168" key="extract.method.dialog" timestamp="1589125977108">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="168" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1589125977108" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589399281937">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589399281937" />
   </component>
 </project>
