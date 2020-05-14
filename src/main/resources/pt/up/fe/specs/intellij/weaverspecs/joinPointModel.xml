@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
-<joinpoints root_class="app">
+<joinpoints root_class="file">
 	
 	<!-- APPLICATION -->
+	<!--
 	<joinpoint class="app" tooltip="Root node of the application">
 		<select 					class="file" tooltip="files of the application"/>
 	</joinpoint>
-	
+	-->
 	
 	<!-- FILE -->
 	<joinpoint class="file" tooltip="A source-code file">

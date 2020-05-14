@@ -32,7 +32,7 @@ public abstract class APsiWeaver extends WeaverEngine {
      */
     @Override
     public final String getRoot() {
-        return "app";
+        return "file";
     }
 
     /**

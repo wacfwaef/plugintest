@@ -77,17 +77,6 @@ public abstract class AMethod extends APsiWeaverJoinPoint {
     @Override
     public void defImpl(String attribute, Object value) {
         switch(attribute){
-        case "line": {
-        	if(value instanceof Integer){
-        		this.defLineImpl((Integer)value);
-        		return;
-        	}
-        	if(value instanceof String){
-        		this.defLineImpl((String)value);
-        		return;
-        	}
-        	this.unsupportedTypeForDef(attribute, value);
-        }
         default: throw new UnsupportedOperationException("Join point "+get_class()+": attribute '"+attribute+"' cannot be defined");
         }
     }
@@ -130,18 +119,7 @@ public abstract class AMethod extends APsiWeaverJoinPoint {
      * 
      */
     protected enum MethodAttributes {
-        PARENT("parent"),
-        ISSTATEMENT("isStatement"),
-        CODE("code"),
-        AST("ast"),
-        ISBLOCK("isBlock"),
-        CHILDREN("children"),
-        LINE("line"),
-        ANCESTOR("ancestor"),
-        NUMCHILDREN("numChildren"),
-        MODIFIERS("modifiers"),
-        DESCENDANTS("descendants"),
-        CHILD("child");
+        AST("ast");
         private String name;
 
         /**

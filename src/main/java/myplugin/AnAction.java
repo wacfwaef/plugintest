@@ -10,7 +10,14 @@ import com.oracle.truffle.js.scriptengine.GraalJSScriptEngine;
 import org.graalvm.polyglot.Context;
 import org.graalvm.polyglot.HostAccess;
 import org.jetbrains.annotations.NotNull;
+import org.suikasoft.jOptions.Interfaces.DataStore;
+import pt.up.fe.specs.intellij.psiweaver.PsiWeaver;
+import pt.up.fe.specs.util.SpecsIo;
+import pt.up.fe.specs.util.providers.ResourceProvider;
 import runnable.MyRunnable;
+
+import java.io.File;
+import java.util.concurrent.Callable;
 
 /*
 import org.suikasoft.XStreamPlus.XStreamUtils;
@@ -28,7 +35,6 @@ public class AnAction extends com.intellij.openapi.actionSystem.AnAction {
 
 
             PsiFile rootFile = e.getData(LangDataKeys.PSI_FILE);
-            System.out.println("Hey");
 
             Project currentProject = e.getProject();
             if (rootFile == null) {
@@ -36,12 +42,41 @@ public class AnAction extends com.intellij.openapi.actionSystem.AnAction {
                 return;
             }
 
-        Context.Builder contextBuilder = Context.newBuilder("js")
-                .allowHostAccess(HostAccess.ALL);
-        contextBuilder.allowExperimentalOptions(true).option("js.nashorn-compat", "true");
+        System.out.println("Before LARA");
 
-        var engine = GraalJSScriptEngine.create(null, contextBuilder);
 
+//        PsiWeaver.runAspect(rootFile, "import lara.Io; aspectdef println('Hello'); Io.writeFile('test.txt', 'testeee'); end");
+//        Callable<DataStore> runnable = () ->  PsiWeaver.runAspect(rootFile, "import lara.Io; aspectdef println('Hello'); Io.writeFile('test.txt', 'testeee'); end");
+        ResourceProvider testLara = () -> "pt/up/fe/specs/intellij/weaverspecs/Test.lara";
+//        var laraFile = new File(SpecsIo.getTempFolder(), "test.lara");
+//        SpecsIo.write(laraFile, testLara.read());
+        Callable<DataStore> runnable = () ->  PsiWeaver.runAspect(rootFile, testLara.read());
+        DataStore results = launch(runnable);
+
+        Messages.showMessageDialog(currentProject, "LARA Finished, results:\n" + results, "PsiWeaver Execution Finished", Messages.getInformationIcon());
+
+        System.out.println("After  LARA");
+    }
+
+    public DataStore launch(Callable<DataStore> runnable) {
+        Thread t = Thread.currentThread();
+        ClassLoader previousClassLoader = t.getContextClassLoader();
+        var newClassloader = SpecsIo.class.getClassLoader();
+        System.out.println("Unloading classloader " + previousClassLoader);
+        System.out.println("Using classloader " + newClassloader);
+        System.out.println("Parent classloader " + newClassloader.getParent());
+        t.setContextClassLoader(newClassloader);
+
+        try {
+            return runnable.call();
+        } catch (Exception e) {
+            System.out.println("Exception while calling weaver: " + e);
+            e.printStackTrace();
+        } finally {
+            t.setContextClassLoader(previousClassLoader);
+        }
+
+        return null;
     }
 
     /*

@@ -43,4 +43,9 @@ public abstract class APsiWeaverJoinPoint extends AJoinPoint {
         throw new UnsupportedOperationException(
                 "Join point " + get_class() + ": Action insert(String,joinpoint) not implemented ");
     }
+
+    @Override
+    public String getAstImpl() {
+        throw new RuntimeException("");
+    }
 }

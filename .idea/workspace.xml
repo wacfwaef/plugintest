@@ -25,35 +25,29 @@
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/libs/lara-framework-202005131644.pom" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/myplugin/AnAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/PsiWeaver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/PsiWeaver.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/PsiWeaverGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/APsiWeaverJoinPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AConstructor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AJoinPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AObjectType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AScope.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AStatement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/weaver/APsiWeaver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/exceptions/PsiWeaverException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/runnable/MyRunnable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pt/up/fe/specs/intellij/weaverspecs/actionModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pt/up/fe/specs/intellij/weaverspecs/artifacts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pt/up/fe/specs/intellij/weaverspecs/joinPointModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/Test.lara" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/test.psiweaver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/joinpoints/IntelliJFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pt/up/fe/specs/intellij/weaverspecs/Test.lara" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/actiona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/actiona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myplugin/AnAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myplugin/AnAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/PsiWeaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/PsiWeaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/PsiWeaver.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/PsiWeaver.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/APsiWeaverJoinPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/APsiWeaverJoinPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AConstructor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AJoinPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AJoinPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AObjectType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AObjectType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AScope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AScope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/joinpoints/AStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/weaver/APsiWeaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/up/fe/specs/intellij/psiweaver/abstracts/weaver/APsiWeaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pt/up/fe/specs/intellij/weaverspecs/artifacts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pt/up/fe/specs/intellij/weaverspecs/artifacts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pt/up/fe/specs/intellij/weaverspecs/joinPointModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pt/up/fe/specs/intellij/weaverspecs/joinPointModel.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +83,9 @@
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="plugintest" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -282,7 +279,7 @@
       <workItem from="1589212059616" duration="517000" />
       <workItem from="1589379809563" duration="2838000" />
       <workItem from="1589384045937" duration="13706000" />
-      <workItem from="1589408071020" duration="748000" />
+      <workItem from="1589408071020" duration="5638000" />
     </task>
     <servers />
   </component>
@@ -314,30 +311,35 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1587726231278" />
-    <state x="488" y="93" key="#com.intellij.ide.util.MemberChooser" timestamp="1587652116407">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="530" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589413434080">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="530" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1589413434080" />
+    <state x="549" y="100" key="#com.intellij.ide.util.MemberChooser" timestamp="1589414519642">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="488" y="93" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1587652116407" />
+    <state x="549" y="100" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1589414519642" />
     <state x="577" y="162" width="438" height="494" key="FileChooserDialogImpl" timestamp="1588966348682">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="577" y="162" width="438" height="494" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588966348682" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1589407894640">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1589414762177">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589407894640" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1589407894640">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589414762177" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1589414762177">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589407894640" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1589407894640">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589414762177" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1589414762176">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589407894640" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1589407894640">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589414762176" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1589414762177">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589407894640" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589414762177" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1588966560721">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -366,9 +368,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="168" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1589125977108" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589399281937">
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1589414260878">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589399281937" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1589414260878" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589414649963">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589414649963" />
   </component>
 </project>

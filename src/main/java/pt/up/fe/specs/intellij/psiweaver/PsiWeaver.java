@@ -1,8 +1,6 @@
 package pt.up.fe.specs.intellij.psiweaver;
 
 import com.intellij.psi.PsiFile;
-import com.oracle.truffle.api.ArrayUtils;
-import org.lara.interpreter.cli.CLIConfigOption;
 import org.lara.interpreter.weaver.options.WeaverOption;
 import org.lara.language.specification.LanguageSpecification;
 import org.lara.language.specification.dsl.LanguageSpecificationV2;
@@ -17,10 +15,10 @@ import java.util.UUID;
 import org.suikasoft.jOptions.Interfaces.DataStore;
 import org.lara.interpreter.weaver.interf.JoinPoint;
 import org.lara.interpreter.weaver.interf.AGear;
+import pt.up.fe.specs.intellij.psiweaver.joinpoints.IntelliJFile;
 import pt.up.fe.specs.lara.WeaverLauncher;
 import pt.up.fe.specs.util.SpecsIo;
 import pt.up.fe.specs.util.SpecsLogs;
-import pt.up.fe.specs.util.SpecsStrings;
 import pt.up.fe.specs.util.SpecsSystem;
 
 import pt.up.fe.specs.lara.langspec.LangSpecsXmlParser;
@@ -60,34 +58,36 @@ public class PsiWeaver extends APsiWeaver {
         //CLIConfigOption.ALLOW_GUI = false;
         List<String> arguments = new ArrayList<>();
 
+
         arguments.add(laraAspect.getAbsolutePath());
         arguments.add("-b");
         arguments.add("2");
 
-//        arguments.add("-js");
-//        arguments.add("NASHORN");
+        arguments.add("-js");
+        arguments.add("NASHORN");
 
         PsiWeaver weaver = new PsiWeaver(rootFile);
-        System.out.println("Current classloader: " +  Thread.currentThread().getContextClassLoader());
-        System.out.println("Truffle classloader: " + ArrayUtils.class.getClassLoader());
+//        System.out.println("Current classloader: " +  Thread.currentThread().getContextClassLoader());
+//        System.out.println("Truffle classloader: " + ArrayUtils.class.getClassLoader());
+//
+//        var otherThreadClassloader = SpecsSystem.executeOnThreadAndWait(() -> ArrayUtils.class.getClassLoader());
+//        System.out.println("Other thread classloader: " + otherThreadClassloader);
 
-        var otherThreadClassloader = SpecsSystem.executeOnThreadAndWait(() -> ArrayUtils.class.getClassLoader());
-        System.out.println("Other thread classloader: " + otherThreadClassloader);
+//        Thread t = Thread.currentThread();
+//        ClassLoader previousClassLoader = t.getContextClassLoader();
+//        System.out.println("Previous classloader: " + previousClassLoader);
+//        t.setContextClassLoader(ArrayUtils.class.getClassLoader());
+//       boolean success = false;
+//        try {
+//            new WeaverLauncher(weaver).launch(arguments.toArray(new String[0]));
+//        } finally {
+//            t.setContextClassLoader(previousClassLoader);
+//        }
 
-        Thread t = Thread.currentThread();
-        ClassLoader previousClassLoader = t.getContextClassLoader();
-        System.out.println("Previous classloader: " + previousClassLoader);
-        t.setContextClassLoader(ArrayUtils.class.getClassLoader());
-        boolean success = false;
-        try {
-            new WeaverLauncher(weaver).launch(arguments.toArray(new String[0]));
-        } finally {
-            t.setContextClassLoader(previousClassLoader);
-        }
+//        var result = new WeaverLauncher(weaver).launchExternal(arguments.toArray(new String[0]));
+        var result = new WeaverLauncher(weaver).launch(arguments.toArray(new String[0]));
 
-
-//        new WeaverLauncher(weaver).launchExternal(arguments.toArray(new String[0]));
-
+        System.out.println("RESULT: " + result);
         return weaver.getUserData();
     }
 
@@ -144,8 +144,9 @@ public class PsiWeaver extends APsiWeaver {
      * @return an instance of the join point root/program
      */
     public JoinPoint select() {
+        return new IntelliJFile(rootFile);
         //return new <AApp implementation>;
-        throw new UnsupportedOperationException("Method select for PsiWeaver is not yet implemented");
+//        throw new UnsupportedOperationException("Method select for PsiWeaver is not yet implemented");
     }
 
     /**
