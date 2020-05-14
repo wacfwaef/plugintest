@@ -2,13 +2,10 @@ import weaver.Weaver;
 
 aspectdef SelectFile
 
-
     select file end
     apply
         Weaver.getWeaverEngine().getUserData().setRaw("filename", $file.name);
     end
-
-
 
 end
 
