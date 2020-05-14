@@ -1,0 +1,13 @@
+aspectdef Hashmap
+
+	var i=0;
+	select class.field end
+	apply
+		i = $field.line; //linha onde esta a instancia wakelock
+	end
+	condition
+		$field.type == 'HashMap'
+	end
+	if ( i != 0) 
+	println('\t Warning! You are using Hashmap at line' + i + ', making this energy inefficient. Please use ArrayMap instead.');
+end

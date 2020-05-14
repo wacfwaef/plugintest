@@ -1,0 +1,46 @@
+Hashmap.lara
+	variables
+		i = field.line;
+	functions	
+		select (class.field)
+		apply (i=field.line)
+		condition (field.type = hashmap)
+		if(i!=0)
+		
+private.lara
+	variables
+		call_graph [method.name, call.name)
+	functions
+		select (class.method.call)
+		apply (call_graph.inc)
+		for (m in call_graph)
+		for (c in call_graph[m]
+		if  (c.has('get'))
+		if  (c.has('set'))
+		
+wakelock.lara
+	variables
+		i=field.line
+		count;
+		call_graph [method.name, call.name)
+	functions
+		select (class.field)
+		apply (i=field.line)
+		condition (field.type = 'Wakelock')
+		select (class.method.call)
+		apply (call_graph.inc)
+		for (m in call_graph)
+		for (c in call_graph[m]
+		if  (c == 'onPause')
+		if (count == 0 && i != 0)
+		
+SmellFindViewById.lara
+	variables
+		call_graph [method.name, call.name)
+	functions
+		select (class.method.call)
+		apply (call_graph.inc)
+		for (m in call_graph)
+		for (c in call_graph[m]
+		if  (c == 'findViewById')
+		

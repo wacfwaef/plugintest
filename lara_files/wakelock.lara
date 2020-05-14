@@ -1,0 +1,31 @@
+aspectdef Wakelock
+	var count = 0;
+	var i=0;
+	select class.field end
+	apply
+		i = $field.line; //linha onde esta a instancia wakelock
+	end
+	condition
+		$field.type == 'Wakelock'
+	end
+	 
+	var call_graph = new LaraObject();
+	//Select calls inside methods
+	select class.method.call end
+	apply
+	    //increment the tuple <method,call>
+	    call_graph.inc($method.name, $call.name);
+	end
+	
+	//Foreach method 'm'
+	for (var m in call_graph) {
+		//Foreach call 'c'
+		for (var c in call_graph[m]) {
+		   
+		    if(c == 'onPause')
+		    count++; //methods onpause
+		}
+	}
+	if (count == 0 && i != 0) 
+	println('\t Warning! Your wakelock at line' + i + 'might not have a possible stop method, making this energy inefficient. Please use the method onPause');
+end
