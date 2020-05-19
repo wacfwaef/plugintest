@@ -16,4 +16,27 @@ public class IntelliJObjectType extends AObjectType {
     public PsiElement getNode() {
         return aClass;
     }
+
+    @Override
+    public String getNameImpl() {
+        return aClass.getName();
+    }
+
+    @Override
+    public String getQualifiedNameImpl() {
+        return aClass.getQualifiedName();
+    }
+
+    @Override
+    public String getPackageImpl() {
+        var qualifiedName = getQualifiedNameImpl();
+        var simpleName = getNameImpl();
+
+        if(qualifiedName.equals(simpleName)) {
+            return "";
+        }
+
+        int endIndex = qualifiedName.length() - simpleName.length() - 1;
+        return qualifiedName.substring(0, endIndex);
+    }
 }

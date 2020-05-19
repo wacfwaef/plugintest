@@ -1,9 +1,11 @@
 package pt.up.fe.specs.intellij.psiweaver.abstracts.joinpoints;
 
+import org.lara.interpreter.weaver.interf.events.Stage;
+import java.util.Optional;
+import org.lara.interpreter.exception.AttributeException;
 import pt.up.fe.specs.intellij.psiweaver.abstracts.APsiWeaverJoinPoint;
 import java.util.List;
 import org.lara.interpreter.weaver.interf.JoinPoint;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.Arrays;
 
@@ -15,6 +17,75 @@ import java.util.Arrays;
  * @author Lara Weaver Generator
  */
 public abstract class AObjectType extends APsiWeaverJoinPoint {
+
+    /**
+     * the simple name of the class
+     */
+    public abstract String getNameImpl();
+
+    /**
+     * the simple name of the class
+     */
+    public final Object getName() {
+        try {
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "name", Optional.empty());
+        	}
+        	String result = this.getNameImpl();
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.END, this, "name", Optional.ofNullable(result));
+        	}
+        	return result!=null?result:getUndefinedValue();
+        } catch(Exception e) {
+        	throw new AttributeException(get_class(), "name", e);
+        }
+    }
+
+    /**
+     * the qualified name of this class, includes packages
+     */
+    public abstract String getQualifiedNameImpl();
+
+    /**
+     * the qualified name of this class, includes packages
+     */
+    public final Object getQualifiedName() {
+        try {
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "qualifiedName", Optional.empty());
+        	}
+        	String result = this.getQualifiedNameImpl();
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.END, this, "qualifiedName", Optional.ofNullable(result));
+        	}
+        	return result!=null?result:getUndefinedValue();
+        } catch(Exception e) {
+        	throw new AttributeException(get_class(), "qualifiedName", e);
+        }
+    }
+
+    /**
+     * package name of this class
+     */
+    public abstract String getPackageImpl();
+
+    /**
+     * package name of this class
+     */
+    public final Object getPackage() {
+        try {
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "package", Optional.empty());
+        	}
+        	String result = this.getPackageImpl();
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.END, this, "package", Optional.ofNullable(result));
+        	}
+        	return result!=null?result:getUndefinedValue();
+        } catch(Exception e) {
+        	throw new AttributeException(get_class(), "package", e);
+        }
+    }
 
     /**
      * 
@@ -46,6 +117,9 @@ public abstract class AObjectType extends APsiWeaverJoinPoint {
     @Override
     protected void fillWithAttributes(List<String> attributes) {
         super.fillWithAttributes(attributes);
+        attributes.add("name");
+        attributes.add("qualifiedName");
+        attributes.add("package");
     }
 
     /**
@@ -76,6 +150,9 @@ public abstract class AObjectType extends APsiWeaverJoinPoint {
      * 
      */
     protected enum ObjectTypeAttributes {
+        NAME("name"),
+        QUALIFIEDNAME("qualifiedName"),
+        PACKAGE("package"),
         AST("ast"),
         CODE("code"),
         CHILDREN("children"),

@@ -4,13 +4,24 @@ aspectdef SelectFile
 
     Weaver.getWeaverEngine().getUserData().setRaw("TEST", "testing");
 
+/*
     select file.class end
     apply
         Weaver.getWeaverEngine().getUserData().setRaw("File Line", $file.line);
-        //Weaver.getWeaverEngine().getUserData().setRaw("AST", $file.ast);
+        Weaver.getWeaverEngine().getUserData().setRaw("Class Line", $class.line);
+
+        Weaver.getWeaverEngine().getUserData().setRaw("AST", $file.ast);
         //Weaver.getWeaverEngine().getUserData().setRaw("Code", $file.code);
 
-        Weaver.getWeaverEngine().getUserData().setRaw("Class Line", $class.line);
+
+    end
+*/
+
+    select class end
+    apply
+        Weaver.getWeaverEngine().getUserData().setRaw("Class name", $class.name);
+        Weaver.getWeaverEngine().getUserData().setRaw("Class qualified name", $class.qualifiedName);
+        Weaver.getWeaverEngine().getUserData().setRaw("Class package", $class.package);
     end
 
 end

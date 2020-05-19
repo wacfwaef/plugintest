@@ -44,7 +44,9 @@
 	
 	<!-- FIELD -->
 	<!-- <joinpoint class="field" extends="declaration"/> -->
-		
+	<joinpoint class="field"/>
+
+
 	<!-- METHOD -->
 
 	<!--

@@ -100,9 +100,9 @@ public abstract class APsiWeaverJoinPoint extends AJoinPoint {
     }
 
     private static String toString(PsiElement node) {
-//        return node.toString();
+        return node.toString();
 //        return node.toString() + " (line: " + IntelliJNodes.getLine(node) + ")";
-        return node.toString() + " (code: " + IntelliJNodes.getCode(node) + ")";
+//        return node.toString() + " (code: " + IntelliJNodes.getCode(node) + ")";
     }
 
     @Override

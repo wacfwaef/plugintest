@@ -42,16 +42,20 @@
 		<attribute name="path"	type="String"/>
 		<attribute name="package"	type="String"/>
 	</artifact>
-	
-		
+
+
 	<!-- OBJECT TYPE -->
-	<!--
 	<artifact class="objectType" default="name">
-   		<attribute name="name"				type="String" tooltip="the simple name of the class"/>	
-   		<attribute name="qualifiedName"		type="String" tooltip="the qualified name of this class, includes packages"/>	
+   		<attribute name="name"				type="String" tooltip="the simple name of the class"/>
+   		<attribute name="qualifiedName"		type="String" tooltip="the qualified name of this class, includes packages"/>
    		<attribute name="package"			type="String" tooltip="package name of this class"/>
 	</artifact>
-	-->
+
+	<!-- FIELD -->
+	<artifact class="interface" default="name">
+	</artifact>
+		
+
 
 	<!-- CLASS -->
 	<!--
@@ -64,7 +68,10 @@
 	<artifact class="interface" default="name">
 	</artifact>
 	-->
-	
+
+
+
+
 	<!-- METHOD -->
 	<!--
 	<artifact class="method" default="name">

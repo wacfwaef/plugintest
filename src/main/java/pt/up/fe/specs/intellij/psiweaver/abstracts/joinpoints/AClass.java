@@ -24,6 +24,33 @@ public abstract class AClass extends AObjectType {
         this.aObjectType = aObjectType;
     }
     /**
+     * Get value on attribute name
+     * @return the attribute's value
+     */
+    @Override
+    public String getNameImpl() {
+        return this.aObjectType.getNameImpl();
+    }
+
+    /**
+     * Get value on attribute qualifiedName
+     * @return the attribute's value
+     */
+    @Override
+    public String getQualifiedNameImpl() {
+        return this.aObjectType.getQualifiedNameImpl();
+    }
+
+    /**
+     * Get value on attribute _package
+     * @return the attribute's value
+     */
+    @Override
+    public String getPackageImpl() {
+        return this.aObjectType.getPackageImpl();
+    }
+
+    /**
      * 
      * @param node 
      */
@@ -202,6 +229,9 @@ public abstract class AClass extends AObjectType {
      * 
      */
     protected enum ClassAttributes {
+        NAME("name"),
+        QUALIFIEDNAME("qualifiedName"),
+        PACKAGE("package"),
         AST("ast"),
         CODE("code"),
         CHILDREN("children"),
