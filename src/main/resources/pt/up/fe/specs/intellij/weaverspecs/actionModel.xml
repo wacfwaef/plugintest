@@ -42,28 +42,34 @@
 
 
 	<!-- APP, FILE -->
+	<!--
 	<action name="newClass" class="app,file" return="class">
 		<parameter name="name" type="String"/>
 		<parameter name="extend" type="String" default=""/>
 		<parameter name="implement" type="String[]" default="[]"/>
 	</action>
-		
+	-->
 	
 	<!--  METHOD -->
+	<!--
 	<action name="setName" class="method" return="string" tooltip="Sets the name of this method, returns the previous name">
 		<parameter name="name" type="String"/>	
 	</action>
+	-->
 
 	
 	
 	<!-- SCOPE -->
+	<!--
 	<action name="insertBegin" class="scope">
 		<parameter name="code" type="String"/>
 	</action>
-	
+	-->
+	<!--
 	<action name="insertBegin" class="body">
 		<parameter name="statement" type="statement"/>
-	</action>	
+	</action>
+	-->
 	
 	
 </actions>

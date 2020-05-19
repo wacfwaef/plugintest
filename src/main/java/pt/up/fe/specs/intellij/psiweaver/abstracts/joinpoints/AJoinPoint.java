@@ -288,6 +288,10 @@ public abstract class AJoinPoint extends JoinPoint {
     protected void fillWithAttributes(List<String> attributes) {
         //Attributes available for all join points
         attributes.add("ast");
+        attributes.add("line");
+        attributes.add("code");
+        attributes.add("children");
+        attributes.add("descendants");
     }
 
     /**
@@ -310,6 +314,120 @@ public abstract class AJoinPoint extends JoinPoint {
         	return result!=null?result:getUndefinedValue();
         } catch(Exception e) {
         	throw new AttributeException(get_class(), "ast", e);
+        }
+    }
+
+    /**
+     * Get value on attribute line
+     * @return the attribute's value
+     */
+    public abstract Integer getLineImpl();
+
+    /**
+     * Get value on attribute line
+     * @return the attribute's value
+     */
+    public final Object getLine() {
+        try {
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "line", Optional.empty());
+        	}
+        	Integer result = this.getLineImpl();
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.END, this, "line", Optional.ofNullable(result));
+        	}
+        	return result!=null?result:getUndefinedValue();
+        } catch(Exception e) {
+        	throw new AttributeException(get_class(), "line", e);
+        }
+    }
+
+    /**
+     * The source code corresponding to this join point
+     */
+    public abstract String getCodeImpl();
+
+    /**
+     * The source code corresponding to this join point
+     */
+    public final Object getCode() {
+        try {
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "code", Optional.empty());
+        	}
+        	String result = this.getCodeImpl();
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.END, this, "code", Optional.ofNullable(result));
+        	}
+        	return result!=null?result:getUndefinedValue();
+        } catch(Exception e) {
+        	throw new AttributeException(get_class(), "code", e);
+        }
+    }
+
+    /**
+     * Get value on attribute children
+     * @return the attribute's value
+     */
+    public abstract AJoinPoint[] getChildrenArrayImpl();
+
+    /**
+     * Returns an array with the children of the node
+     */
+    public Object getChildrenImpl() {
+        AJoinPoint[] aJoinPointArrayImpl0 = getChildrenArrayImpl();
+        Object nativeArray0 = getWeaverEngine().getScriptEngine().toNativeArray(aJoinPointArrayImpl0);
+        return nativeArray0;
+    }
+
+    /**
+     * Returns an array with the children of the node
+     */
+    public final Object getChildren() {
+        try {
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "children", Optional.empty());
+        	}
+        	Object result = this.getChildrenImpl();
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.END, this, "children", Optional.ofNullable(result));
+        	}
+        	return result!=null?result:getUndefinedValue();
+        } catch(Exception e) {
+        	throw new AttributeException(get_class(), "children", e);
+        }
+    }
+
+    /**
+     * Get value on attribute descendants
+     * @return the attribute's value
+     */
+    public abstract AJoinPoint[] getDescendantsArrayImpl();
+
+    /**
+     * Returns an array with the descendants of the node
+     */
+    public Object getDescendantsImpl() {
+        AJoinPoint[] aJoinPointArrayImpl0 = getDescendantsArrayImpl();
+        Object nativeArray0 = getWeaverEngine().getScriptEngine().toNativeArray(aJoinPointArrayImpl0);
+        return nativeArray0;
+    }
+
+    /**
+     * Returns an array with the descendants of the node
+     */
+    public final Object getDescendants() {
+        try {
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "descendants", Optional.empty());
+        	}
+        	Object result = this.getDescendantsImpl();
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.END, this, "descendants", Optional.ofNullable(result));
+        	}
+        	return result!=null?result:getUndefinedValue();
+        } catch(Exception e) {
+        	throw new AttributeException(get_class(), "descendants", e);
         }
     }
 

@@ -5,7 +5,6 @@ import java.util.Optional;
 import org.lara.interpreter.exception.AttributeException;
 import java.util.List;
 import org.lara.interpreter.weaver.interf.SelectOp;
-import org.lara.interpreter.exception.ActionException;
 import pt.up.fe.specs.intellij.psiweaver.abstracts.APsiWeaverJoinPoint;
 import org.lara.interpreter.weaver.interf.JoinPoint;
 import java.util.stream.Collectors;
@@ -104,45 +103,6 @@ public abstract class AFile extends APsiWeaverJoinPoint {
     }
 
     /**
-     * Represents Java interfaces
-     * @return 
-     */
-    public List<? extends AInterface> selectInterface() {
-        return select(pt.up.fe.specs.intellij.psiweaver.abstracts.joinpoints.AInterface.class, SelectOp.DESCENDANTS);
-    }
-
-    /**
-     * 
-     * @param name 
-     * @param extend 
-     * @param implement 
-     */
-    public AClass newClassImpl(String name, String extend, String[] implement) {
-        throw new UnsupportedOperationException(get_class()+": Action newClass not implemented ");
-    }
-
-    /**
-     * 
-     * @param name 
-     * @param extend 
-     * @param implement 
-     */
-    public final AClass newClass(String name, String extend, String[] implement) {
-        try {
-        	if(hasListeners()) {
-        		eventTrigger().triggerAction(Stage.BEGIN, "newClass", this, Optional.empty(), name, extend, implement);
-        	}
-        	AClass result = this.newClassImpl(name, extend, implement);
-        	if(hasListeners()) {
-        		eventTrigger().triggerAction(Stage.END, "newClass", this, Optional.ofNullable(result), name, extend, implement);
-        	}
-        	return result;
-        } catch(Exception e) {
-        	throw new ActionException(get_class(), "newClass", e);
-        }
-    }
-
-    /**
      * 
      */
     @Override
@@ -151,9 +111,6 @@ public abstract class AFile extends APsiWeaverJoinPoint {
         switch(selectName) {
         	case "class": 
         		joinPointList = selectClass();
-        		break;
-        	case "interface": 
-        		joinPointList = selectInterface();
         		break;
         	default:
         		joinPointList = super.select(selectName);
@@ -190,7 +147,6 @@ public abstract class AFile extends APsiWeaverJoinPoint {
     protected final void fillWithSelects(List<String> selects) {
         super.fillWithSelects(selects);
         selects.add("class");
-        selects.add("interface");
     }
 
     /**
@@ -199,7 +155,6 @@ public abstract class AFile extends APsiWeaverJoinPoint {
     @Override
     protected final void fillWithActions(List<String> actions) {
         super.fillWithActions(actions);
-        actions.add("class newClass(String, String, String[])");
     }
 
     /**
@@ -217,7 +172,11 @@ public abstract class AFile extends APsiWeaverJoinPoint {
         NAME("name"),
         PATH("path"),
         PACKAGE("package"),
-        AST("ast");
+        AST("ast"),
+        CODE("code"),
+        CHILDREN("children"),
+        DESCENDANTS("descendants"),
+        LINE("line");
         private String name;
 
         /**

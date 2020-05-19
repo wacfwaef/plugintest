@@ -10,26 +10,29 @@
 	
 	<!-- FILE -->
 	<joinpoint class="file" tooltip="A source-code file">
-		<select						class="class" tooltip="Represents Java classes"/> 
-		<select 					class="interface" tooltip="Represents Java interfaces"/>
+		<select						class="class" tooltip="Represents Java classes"/>
+		<!--<select 					class="interface" tooltip="Represents Java interfaces"/> -->
 	</joinpoint>
 
 
 	<!-- OBJECT TYPE -->
 	<joinpoint class="objectType"  tooltip="base join point that class, interface and enum extend">
-		<!--<select 					class="field" 	tooltip="fields inside a class"/>-->
-		<select 					class="method" 	tooltip="methods inside a class"/>
+		<!--<select 					class="field" 	tooltip="fields inside a class"/> -->
+		<!--<select 					class="method" 	tooltip="methods inside a class"/> -->
 	</joinpoint>
 	
 		
 	<!-- CLASS -->
 	<joinpoint class="class" tooltip="join point representation of a class" extends="objectType">
-		<select 					class="constructor" tooltip="the class constructors"/>
+		<!--<select 					class="constructor" tooltip="the class constructors"/> -->
 	</joinpoint>
-			
+
+
 	<!-- INTERFACE -->
+	<!--
 	<joinpoint class="interface"  extends="objectType">
 	</joinpoint>
+	-->
 
 
 	<!-- ENUM -->
@@ -43,23 +46,32 @@
 	<!-- <joinpoint class="field" extends="declaration"/> -->
 		
 	<!-- METHOD -->
+
+	<!--
 	<joinpoint class="method">
 		<select 					class="scope"/>
-		<!--<select alias="param" 		class="declaration"/>-->
+		<select alias="param" 		class="declaration"/>
 	</joinpoint>
+	-->
 	
 	<!-- CONSTRUCTOR -->
+	<!--
 	<joinpoint class="constructor" extends="method">
 	</joinpoint>
+	-->
 	
 	<!-- SCOPE -->
+	<!--
 	<joinpoint class="scope" extends="statement">
 		<select 			 		class="statement"/>
 	</joinpoint>
+	-->
 	
 	<!-- STATEMENT -->
+	<!--
 	<joinpoint class="statement">
 	</joinpoint>
+	-->
 	
 	
 	

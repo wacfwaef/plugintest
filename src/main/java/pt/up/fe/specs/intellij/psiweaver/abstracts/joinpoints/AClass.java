@@ -1,9 +1,8 @@
 package pt.up.fe.specs.intellij.psiweaver.abstracts.joinpoints;
 
-import java.util.List;
-import org.lara.interpreter.weaver.interf.SelectOp;
 import org.lara.interpreter.weaver.interf.JoinPoint;
 import java.util.Optional;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.Arrays;
 
@@ -24,50 +23,6 @@ public abstract class AClass extends AObjectType {
     public AClass(AObjectType aObjectType){
         this.aObjectType = aObjectType;
     }
-    /**
-     * the class constructors
-     * @return 
-     */
-    public List<? extends AConstructor> selectConstructor() {
-        return select(pt.up.fe.specs.intellij.psiweaver.abstracts.joinpoints.AConstructor.class, SelectOp.DESCENDANTS);
-    }
-
-    /**
-     * Get value on attribute name
-     * @return the attribute's value
-     */
-    @Override
-    public String getNameImpl() {
-        return this.aObjectType.getNameImpl();
-    }
-
-    /**
-     * Get value on attribute qualifiedName
-     * @return the attribute's value
-     */
-    @Override
-    public String getQualifiedNameImpl() {
-        return this.aObjectType.getQualifiedNameImpl();
-    }
-
-    /**
-     * Get value on attribute _package
-     * @return the attribute's value
-     */
-    @Override
-    public String getPackageImpl() {
-        return this.aObjectType.getPackageImpl();
-    }
-
-    /**
-     * methods inside a class
-     * @return 
-     */
-    @Override
-    public List<? extends AMethod> selectMethod() {
-        return this.aObjectType.selectMethod();
-    }
-
     /**
      * 
      * @param node 
@@ -181,12 +136,6 @@ public abstract class AClass extends AObjectType {
     public final List<? extends JoinPoint> select(String selectName) {
         List<? extends JoinPoint> joinPointList;
         switch(selectName) {
-        	case "constructor": 
-        		joinPointList = selectConstructor();
-        		break;
-        	case "method": 
-        		joinPointList = selectMethod();
-        		break;
         	default:
         		joinPointList = this.aObjectType.select(selectName);
         		break;
@@ -218,7 +167,6 @@ public abstract class AClass extends AObjectType {
     @Override
     protected final void fillWithSelects(List<String> selects) {
         this.aObjectType.fillWithSelects(selects);
-        selects.add("constructor");
     }
 
     /**
@@ -254,10 +202,11 @@ public abstract class AClass extends AObjectType {
      * 
      */
     protected enum ClassAttributes {
-        NAME("name"),
-        QUALIFIEDNAME("qualifiedName"),
-        PACKAGE("package"),
-        AST("ast");
+        AST("ast"),
+        CODE("code"),
+        CHILDREN("children"),
+        DESCENDANTS("descendants"),
+        LINE("line");
         private String name;
 
         /**

@@ -42,7 +42,7 @@ public class AnAction extends com.intellij.openapi.actionSystem.AnAction {
                 return;
             }
 
-        System.out.println("Before LARA");
+            System.out.println("Before LARA");
 
 
 //        PsiWeaver.runAspect(rootFile, "import lara.Io; aspectdef println('Hello'); Io.writeFile('test.txt', 'testeee'); end");

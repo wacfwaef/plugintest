@@ -21,7 +21,7 @@ public abstract class APsiWeaver extends WeaverEngine {
      */
     @Override
     public final List<String> getActions() {
-        String[] weaverActions= {"insertBefore", "insertBefore", "insertAfter", "insertAfter", "insertReplace", "insertReplace", "copy", "remove", "newClass", "setName", "insertBegin", "insertBegin"};
+        String[] weaverActions= {"insertBefore", "insertBefore", "insertAfter", "insertAfter", "insertReplace", "insertReplace", "copy", "remove"};
         return Arrays.asList(weaverActions);
     }
 
