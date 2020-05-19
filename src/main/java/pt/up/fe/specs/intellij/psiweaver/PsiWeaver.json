@@ -352,6 +352,12 @@
                            }]
                },
                {
+                  "type": "select",
+                  "clazz": "field",
+                  "alias": "",
+                  "tooltip": "fields inside a class"
+               },
+               {
                   "type": "action",
                   "children": [
                            {
@@ -487,6 +493,15 @@
          "name": "field",
          "extends": "joinpoint"      ,
          "children": [
+               {
+                  "type": "attribute",
+                  "tooltip": "the type of this field",
+                  "children": [
+                           {
+                              "type": "String",
+                              "name": "type"
+                           }]
+               },
                {
                   "type": "attribute",
                   "children": [
@@ -1087,6 +1102,12 @@
                               "type": "String",
                               "name": "name"
                            }]
+               },
+               {
+                  "type": "select",
+                  "clazz": "field",
+                  "alias": "",
+                  "tooltip": "fields inside a class"
                },
                {
                   "type": "action",

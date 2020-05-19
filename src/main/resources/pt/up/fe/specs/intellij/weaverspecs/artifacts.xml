@@ -52,7 +52,8 @@
 	</artifact>
 
 	<!-- FIELD -->
-	<artifact class="interface" default="name">
+	<artifact class="field">
+		<attribute name="type"			type="String" tooltip="the type of this field"/>
 	</artifact>
 		
 

@@ -4,9 +4,11 @@ import com.intellij.psi.PsiClass;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.impl.source.PsiClassImpl;
+import com.intellij.psi.impl.source.PsiFieldImpl;
 import com.intellij.psi.impl.source.PsiJavaFileImpl;
 import pt.up.fe.specs.intellij.psiweaver.abstracts.APsiWeaverJoinPoint;
 import pt.up.fe.specs.intellij.psiweaver.joinpoints.IntelliJClass;
+import pt.up.fe.specs.intellij.psiweaver.joinpoints.IntelliJField;
 import pt.up.fe.specs.intellij.psiweaver.joinpoints.IntelliJFile;
 import pt.up.fe.specs.util.classmap.FunctionClassMap;
 
@@ -18,6 +20,7 @@ public class IntelliJJoinPoints {
 
         JOINPOINT_FACTORY.put(PsiJavaFileImpl.class, IntelliJFile::new);
         JOINPOINT_FACTORY.put(PsiClassImpl.class, IntelliJJoinPoints::classFactory);
+        JOINPOINT_FACTORY.put(PsiFieldImpl.class, IntelliJField::new);
     }
 
     public static APsiWeaverJoinPoint create(PsiElement node) {

@@ -1,9 +1,11 @@
 package pt.up.fe.specs.intellij.psiweaver.abstracts.joinpoints;
 
+import org.lara.interpreter.weaver.interf.events.Stage;
+import java.util.Optional;
+import org.lara.interpreter.exception.AttributeException;
 import pt.up.fe.specs.intellij.psiweaver.abstracts.APsiWeaverJoinPoint;
 import java.util.List;
 import org.lara.interpreter.weaver.interf.JoinPoint;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.Arrays;
 
@@ -15,6 +17,29 @@ import java.util.Arrays;
  * @author Lara Weaver Generator
  */
 public abstract class AField extends APsiWeaverJoinPoint {
+
+    /**
+     * the type of this field
+     */
+    public abstract String getTypeImpl();
+
+    /**
+     * the type of this field
+     */
+    public final Object getType() {
+        try {
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "type", Optional.empty());
+        	}
+        	String result = this.getTypeImpl();
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.END, this, "type", Optional.ofNullable(result));
+        	}
+        	return result!=null?result:getUndefinedValue();
+        } catch(Exception e) {
+        	throw new AttributeException(get_class(), "type", e);
+        }
+    }
 
     /**
      * 
@@ -46,6 +71,7 @@ public abstract class AField extends APsiWeaverJoinPoint {
     @Override
     protected final void fillWithAttributes(List<String> attributes) {
         super.fillWithAttributes(attributes);
+        attributes.add("type");
     }
 
     /**
@@ -76,6 +102,7 @@ public abstract class AField extends APsiWeaverJoinPoint {
      * 
      */
     protected enum FieldAttributes {
+        TYPE("type"),
         AST("ast"),
         CODE("code"),
         CHILDREN("children"),

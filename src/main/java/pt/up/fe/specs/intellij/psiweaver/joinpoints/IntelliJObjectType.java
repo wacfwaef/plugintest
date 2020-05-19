@@ -3,6 +3,7 @@ package pt.up.fe.specs.intellij.psiweaver.joinpoints;
 import com.intellij.psi.PsiClass;
 import com.intellij.psi.PsiElement;
 import pt.up.fe.specs.intellij.psiweaver.abstracts.joinpoints.AObjectType;
+import pt.up.fe.specs.intellij.util.IntelliJNodes;
 
 public class IntelliJObjectType extends AObjectType {
 
@@ -19,12 +20,12 @@ public class IntelliJObjectType extends AObjectType {
 
     @Override
     public String getNameImpl() {
-        return aClass.getName();
+        return IntelliJNodes.read(() -> aClass.getName());
     }
 
     @Override
     public String getQualifiedNameImpl() {
-        return aClass.getQualifiedName();
+        return IntelliJNodes.read(() -> aClass.getQualifiedName());
     }
 
     @Override

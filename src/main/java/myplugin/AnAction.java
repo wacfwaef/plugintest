@@ -45,15 +45,16 @@ public class AnAction extends com.intellij.openapi.actionSystem.AnAction {
             System.out.println("Before LARA");
 
 
-//        PsiWeaver.runAspect(rootFile, "import lara.Io; aspectdef println('Hello'); Io.writeFile('test.txt', 'testeee'); end");
-//        Callable<DataStore> runnable = () ->  PsiWeaver.runAspect(rootFile, "import lara.Io; aspectdef println('Hello'); Io.writeFile('test.txt', 'testeee'); end");
-        ResourceProvider testLara = () -> "pt/up/fe/specs/intellij/weaverspecs/Test.lara";
-//        var laraFile = new File(SpecsIo.getTempFolder(), "test.lara");
-//        SpecsIo.write(laraFile, testLara.read());
+
+//        ResourceProvider testLara = () -> "pt/up/fe/specs/intellij/weaverspecs/Test.lara";
+        ResourceProvider testLara = () -> "pt/up/fe/specs/intellij/weaverspecs/hashmap.lara";
+
         Callable<DataStore> runnable = () ->  PsiWeaver.runAspect(rootFile, testLara.read());
         DataStore results = launch(runnable);
 
         Messages.showMessageDialog(currentProject, "LARA Finished, results:\n" + results, "PsiWeaver Execution Finished", Messages.getInformationIcon());
+
+        //System.out.println("Field types object: " + results.get("Field types").getClass());
 
         System.out.println("After  LARA");
     }

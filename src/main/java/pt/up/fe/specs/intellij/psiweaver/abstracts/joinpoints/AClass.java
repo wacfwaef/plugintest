@@ -1,8 +1,8 @@
 package pt.up.fe.specs.intellij.psiweaver.abstracts.joinpoints;
 
+import java.util.List;
 import org.lara.interpreter.weaver.interf.JoinPoint;
 import java.util.Optional;
-import java.util.List;
 import java.util.stream.Collectors;
 import java.util.Arrays;
 
@@ -48,6 +48,15 @@ public abstract class AClass extends AObjectType {
     @Override
     public String getPackageImpl() {
         return this.aObjectType.getPackageImpl();
+    }
+
+    /**
+     * fields inside a class
+     * @return 
+     */
+    @Override
+    public List<? extends AField> selectField() {
+        return this.aObjectType.selectField();
     }
 
     /**
@@ -163,6 +172,9 @@ public abstract class AClass extends AObjectType {
     public final List<? extends JoinPoint> select(String selectName) {
         List<? extends JoinPoint> joinPointList;
         switch(selectName) {
+        	case "field": 
+        		joinPointList = selectField();
+        		break;
         	default:
         		joinPointList = this.aObjectType.select(selectName);
         		break;

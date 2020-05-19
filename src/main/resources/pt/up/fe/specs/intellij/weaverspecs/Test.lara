@@ -24,6 +24,15 @@ aspectdef SelectFile
         Weaver.getWeaverEngine().getUserData().setRaw("Class package", $class.package);
     end
 
+    var fieldTypes = [];
+    select field end
+    apply
+        fieldTypes.push($field.type);
+    end
+
+    Weaver.getWeaverEngine().getUserData().setRaw("Field types", fieldTypes);
+    Weaver.getWeaverEngine().getUserData().setRaw("Field types string", fieldTypes.toString());
+
 end
 
 aspectdef CommunicateData

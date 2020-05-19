@@ -1,0 +1,26 @@
+aspectdef FVBI
+
+	/**
+	 * Use a LaraObject to keep track of how many times a 
+	 * <caller, callee> tuple appears on the code.
+	 */
+	var call_graph = new LaraObject();
+	//Select calls inside methods
+	select class.method.call end
+	apply
+	    //increment the tuple <method,call>
+	    call_graph.inc($method.name, $call.name);
+	end
+	
+	//Foreach method 'm'
+	for (var m in call_graph) {
+		//Foreach call 'c'
+		for (var c in call_graph[m]) {
+		    //verify if the called method is findViewById method, the not efficient method
+		    if(c == 'findViewById')
+			    // print tuple <m,c>
+			    println('\t Warning! The class: ' + m + ' is calling the method: ' + c + ' which is energy inefficient \n \t We recomend the usage of ViewHolder design  pattern.');
+		}
+	}
+
+end

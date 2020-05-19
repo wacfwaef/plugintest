@@ -17,7 +17,7 @@
 
 	<!-- OBJECT TYPE -->
 	<joinpoint class="objectType"  tooltip="base join point that class, interface and enum extend">
-		<!--<select 					class="field" 	tooltip="fields inside a class"/> -->
+		<select 					class="field" 	tooltip="fields inside a class"/>
 		<!--<select 					class="method" 	tooltip="methods inside a class"/> -->
 	</joinpoint>
 	

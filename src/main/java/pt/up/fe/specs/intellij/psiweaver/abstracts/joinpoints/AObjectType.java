@@ -3,8 +3,9 @@ package pt.up.fe.specs.intellij.psiweaver.abstracts.joinpoints;
 import org.lara.interpreter.weaver.interf.events.Stage;
 import java.util.Optional;
 import org.lara.interpreter.exception.AttributeException;
-import pt.up.fe.specs.intellij.psiweaver.abstracts.APsiWeaverJoinPoint;
 import java.util.List;
+import org.lara.interpreter.weaver.interf.SelectOp;
+import pt.up.fe.specs.intellij.psiweaver.abstracts.APsiWeaverJoinPoint;
 import org.lara.interpreter.weaver.interf.JoinPoint;
 import java.util.stream.Collectors;
 import java.util.Arrays;
@@ -88,12 +89,23 @@ public abstract class AObjectType extends APsiWeaverJoinPoint {
     }
 
     /**
+     * fields inside a class
+     * @return 
+     */
+    public List<? extends AField> selectField() {
+        return select(pt.up.fe.specs.intellij.psiweaver.abstracts.joinpoints.AField.class, SelectOp.DESCENDANTS);
+    }
+
+    /**
      * 
      */
     @Override
     public List<? extends JoinPoint> select(String selectName) {
         List<? extends JoinPoint> joinPointList;
         switch(selectName) {
+        	case "field": 
+        		joinPointList = selectField();
+        		break;
         	default:
         		joinPointList = super.select(selectName);
         		break;
@@ -128,6 +140,7 @@ public abstract class AObjectType extends APsiWeaverJoinPoint {
     @Override
     protected void fillWithSelects(List<String> selects) {
         super.fillWithSelects(selects);
+        selects.add("field");
     }
 
     /**
