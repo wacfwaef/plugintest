@@ -1,26 +1,17 @@
+import weaver.Weaver;
+
 aspectdef FVBI
 
-	/**
-	 * Use a LaraObject to keep track of how many times a 
-	 * <caller, callee> tuple appears on the code.
-	 */
-	var call_graph = new LaraObject();
+    var message = "";
+
 	//Select calls inside methods
 	select class.method.call end
 	apply
-	    //increment the tuple <method,call>
-	    call_graph.inc($method.name, $call.name);
+	    if($call.name === "findViewById") {
+	        message += 'Warning! The method ' + $class.name + "." + $method.name + ' is calling the method: ' + $call.name + ' (line ' + $call.line + ') which is energy inefficient \n \t We recommend the usage of ViewHolder design  pattern.\n';
+	    }
 	end
 	
-	//Foreach method 'm'
-	for (var m in call_graph) {
-		//Foreach call 'c'
-		for (var c in call_graph[m]) {
-		    //verify if the called method is findViewById method, the not efficient method
-		    if(c == 'findViewById')
-			    // print tuple <m,c>
-			    println('\t Warning! The class: ' + m + ' is calling the method: ' + c + ' which is energy inefficient \n \t We recomend the usage of ViewHolder design  pattern.');
-		}
-	}
+	Weaver.getWeaverEngine().getUserData().setRaw("Message", message);
 
 end

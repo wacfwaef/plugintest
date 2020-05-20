@@ -1,3 +1,5 @@
+import weaver.Weaver;
+
 aspectdef Wakelock
 	var count = 0;
 	var i=0;
@@ -9,23 +11,20 @@ aspectdef Wakelock
 		$field.type == 'Wakelock'
 	end
 	 
-	var call_graph = new LaraObject();
+
 	//Select calls inside methods
+	var count = 0;
 	select class.method.call end
 	apply
-	    //increment the tuple <method,call>
-	    call_graph.inc($method.name, $call.name);
-	end
-	
-	//Foreach method 'm'
-	for (var m in call_graph) {
-		//Foreach call 'c'
-		for (var c in call_graph[m]) {
-		   
-		    if(c == 'onPause')
+        if($call.name  === 'onPause') {
 		    count++; //methods onpause
-		}
+        }
+	end
+
+	var message = "";
+	if (count == 0 && i != 0) {
+	    message += 'Warning! Your wakelock at line' + i + ' might not have a possible stop method, making this energy inefficient. Please use the method onPause';
 	}
-	if (count == 0 && i != 0) 
-	println('\t Warning! Your wakelock at line' + i + 'might not have a possible stop method, making this energy inefficient. Please use the method onPause');
+
+	Weaver.getWeaverEngine().getUserData().setRaw("Message", message);
 end

@@ -48,7 +48,9 @@ public class AnAction extends com.intellij.openapi.actionSystem.AnAction {
 
 //        ResourceProvider testLara = () -> "pt/up/fe/specs/intellij/weaverspecs/Test.lara";
 //        ResourceProvider testLara = () -> "pt/up/fe/specs/intellij/weaverspecs/hashmap.lara";
-        ResourceProvider testLara = () -> "pt/up/fe/specs/intellij/weaverspecs/private.lara";
+//        ResourceProvider testLara = () -> "pt/up/fe/specs/intellij/weaverspecs/private.lara";
+//        ResourceProvider testLara = () -> "pt/up/fe/specs/intellij/weaverspecs/SmellFindViewById.lara";
+        ResourceProvider testLara = () -> "pt/up/fe/specs/intellij/weaverspecs/wakelock.lara";
 
         Callable<DataStore> runnable = () ->  PsiWeaver.runAspect(rootFile, testLara.read());
         DataStore results = launch(runnable);

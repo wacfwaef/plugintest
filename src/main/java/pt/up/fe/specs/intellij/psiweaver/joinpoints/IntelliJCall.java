@@ -21,8 +21,6 @@ public class IntelliJCall extends ACall {
 
     @Override
     public String getNameImpl() {
-        IntelliJNodes.read(() -> System.out.println("Method class: " + call.resolveMethod().getClass()));
-
         var method = IntelliJNodes.read(() -> IntelliJJoinPoints.create(call.resolveMethod(), IntelliJMethod.class));
 
         return method.getNameImpl();
