@@ -97,6 +97,14 @@ public abstract class AObjectType extends APsiWeaverJoinPoint {
     }
 
     /**
+     * methods inside a class
+     * @return 
+     */
+    public List<? extends AMethod> selectMethod() {
+        return select(pt.up.fe.specs.intellij.psiweaver.abstracts.joinpoints.AMethod.class, SelectOp.DESCENDANTS);
+    }
+
+    /**
      * 
      */
     @Override
@@ -105,6 +113,9 @@ public abstract class AObjectType extends APsiWeaverJoinPoint {
         switch(selectName) {
         	case "field": 
         		joinPointList = selectField();
+        		break;
+        	case "method": 
+        		joinPointList = selectMethod();
         		break;
         	default:
         		joinPointList = super.select(selectName);
@@ -141,6 +152,7 @@ public abstract class AObjectType extends APsiWeaverJoinPoint {
     protected void fillWithSelects(List<String> selects) {
         super.fillWithSelects(selects);
         selects.add("field");
+        selects.add("method");
     }
 
     /**

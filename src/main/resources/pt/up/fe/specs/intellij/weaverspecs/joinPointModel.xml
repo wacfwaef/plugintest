@@ -18,6 +18,7 @@
 	<!-- OBJECT TYPE -->
 	<joinpoint class="objectType"  tooltip="base join point that class, interface and enum extend">
 		<select 					class="field" 	tooltip="fields inside a class"/>
+		<select 					class="method" 	tooltip="methods inside a class"/>
 		<!--<select 					class="method" 	tooltip="methods inside a class"/> -->
 	</joinpoint>
 	
@@ -48,13 +49,14 @@
 
 
 	<!-- METHOD -->
-
-	<!--
 	<joinpoint class="method">
-		<select 					class="scope"/>
-		<select alias="param" 		class="declaration"/>
+		<select 					class="call"/>
+		<!--<select 					class="scope"/>-->
+		<!--<select alias="param" 		class="declaration"/>-->
 	</joinpoint>
-	-->
+
+	<joinpoint class="call">
+	</joinpoint>
 	
 	<!-- CONSTRUCTOR -->
 	<!--

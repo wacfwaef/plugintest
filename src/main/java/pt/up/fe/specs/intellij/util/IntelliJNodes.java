@@ -27,7 +27,7 @@ public class IntelliJNodes {
     public static String toTree(PsiElement node, Function<PsiElement, String> toString, String prefix) {
         StringBuilder builder = new StringBuilder();
 
-        toTree(node, toString, prefix, builder);
+        read(() -> toTree(node, toString, prefix, builder));
 
         return builder.toString();
     }
@@ -43,18 +43,22 @@ public class IntelliJNodes {
     }
 
     public static int getLine(PsiElement node) {
-        PsiFile containingFile = node.getContainingFile();
-        Project project = containingFile.getProject();
-        PsiDocumentManager psiDocumentManager = PsiDocumentManager.getInstance(project);
-        Document document = psiDocumentManager.getDocument(containingFile);
-        int textOffset = node.getTextOffset();
-        int lineNumber = document.getLineNumber(textOffset);
+        Supplier<Integer> action = () -> {
+            PsiFile containingFile = node.getContainingFile();
+            Project project = containingFile.getProject();
+            PsiDocumentManager psiDocumentManager = PsiDocumentManager.getInstance(project);
+            Document document = psiDocumentManager.getDocument(containingFile);
+            int textOffset = node.getTextOffset();
+            int lineNumber = document.getLineNumber(textOffset);
 
-        return lineNumber + 1;
+            return lineNumber + 1;
+        };
+
+        return read(action);
     }
 
     public static String getCode(PsiElement node) {
-        return node.getText();
+        return read(() -> node.getText());
 //        return "TEXT: " + node.getText() + "\nTEXT RANGE: " + node.getTextRange();
     }
 

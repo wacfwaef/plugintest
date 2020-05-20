@@ -55,8 +55,17 @@
 	<artifact class="field">
 		<attribute name="type"			type="String" tooltip="the type of this field"/>
 	</artifact>
-		
 
+	<!-- METHOD -->
+	<artifact class="method" default="name">
+		<attribute name="name"			type="String" tooltip="the name of the method"/>
+	</artifact>
+
+
+	<!-- CALL -->
+	<artifact class="call" default="name">
+		<attribute name="name"			type="String" tooltip="the name of the method being called"/>
+	</artifact>
 
 	<!-- CLASS -->
 	<!--
@@ -73,12 +82,7 @@
 
 
 
-	<!-- METHOD -->
-	<!--
-	<artifact class="method" default="name">
-	</artifact>
-	-->
-	
+
 	<!-- CONSTRUCTOR -->
 	<!--
 	<artifact class="constructor" default="name">

@@ -1,26 +1,30 @@
 import lara.util.StringSet;
-
+import weaver.Weaver;
 
 
 aspectdef privategetset
 
-	/**
-	 * Use a LaraObject to keep track of how many times a 
-	 * <caller, callee> tuple appears on the code.
-	 */
-	var call_graph = new LaraObject();
+    var message = "";
+
 	//Select calls inside methods
 	select class.method.call end
 	apply
-	    //increment the tuple <method,call>
-	    call_graph.inc($method.name, $call.name);
+        if($call.name.startsWith('get'))
+			message += 'Warning! The method: ' + $call.name + ' at line ' + $call.line + ' is energy inefficient \n We recomend the usage of Inline getters and setters.\n';
+		else if($call.name.startsWith('set'))
+			message += 	'Warning! The method: ' + $call.name + ' at line ' + $call.line + ' is energy inefficient \n \t We recomend the usage of Inline getters and setters.\n';
 	end
-	
+
+	Weaver.getWeaverEngine().getUserData().setRaw("Message", message);
+
+	/*
 	//Foreach method 'm'
 	for (var m in call_graph) {
 		//Foreach call 'c'
 		for (var c in call_graph[m]) {
 		    //verify if the called method is findViewById method, the not efficient method
+		    println("Object c:");
+		    printlnObject(c);
 		    if(c.has('get'))
 			    // print tuple <m,c>
 			    	println('\t Warning! The method: ' + c + ' is energy inefficient \n \t We recomend the usage of Inline getters and setters.');
@@ -28,5 +32,6 @@ aspectdef privategetset
 				println('\t Warning! The method: ' + c + ' is energy inefficient \n \t We recomend the usage of Inline getters and setters.');
 		}
 	}
+	*/
 
 end

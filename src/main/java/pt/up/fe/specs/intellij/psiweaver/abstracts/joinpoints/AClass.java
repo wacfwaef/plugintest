@@ -60,6 +60,15 @@ public abstract class AClass extends AObjectType {
     }
 
     /**
+     * methods inside a class
+     * @return 
+     */
+    @Override
+    public List<? extends AMethod> selectMethod() {
+        return this.aObjectType.selectMethod();
+    }
+
+    /**
      * 
      * @param node 
      */
@@ -174,6 +183,9 @@ public abstract class AClass extends AObjectType {
         switch(selectName) {
         	case "field": 
         		joinPointList = selectField();
+        		break;
+        	case "method": 
+        		joinPointList = selectMethod();
         		break;
         	default:
         		joinPointList = this.aObjectType.select(selectName);
