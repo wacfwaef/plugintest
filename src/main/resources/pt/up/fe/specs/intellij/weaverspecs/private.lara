@@ -17,21 +17,4 @@ aspectdef privategetset
 
 	Weaver.getWeaverEngine().getUserData().setRaw("Message", message);
 
-	/*
-	//Foreach method 'm'
-	for (var m in call_graph) {
-		//Foreach call 'c'
-		for (var c in call_graph[m]) {
-		    //verify if the called method is findViewById method, the not efficient method
-		    println("Object c:");
-		    printlnObject(c);
-		    if(c.has('get'))
-			    // print tuple <m,c>
-			    	println('\t Warning! The method: ' + c + ' is energy inefficient \n \t We recomend the usage of Inline getters and setters.');
-			else if(c.has('set'))
-				println('\t Warning! The method: ' + c + ' is energy inefficient \n \t We recomend the usage of Inline getters and setters.');
-		}
-	}
-	*/
-
 end
