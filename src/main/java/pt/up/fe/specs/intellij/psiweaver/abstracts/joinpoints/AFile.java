@@ -172,6 +172,7 @@ public abstract class AFile extends APsiWeaverJoinPoint {
         NAME("name"),
         PATH("path"),
         PACKAGE("package"),
+        PSIELEMENT("psiElement"),
         AST("ast"),
         CODE("code"),
         CHILDREN("children"),

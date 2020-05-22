@@ -292,6 +292,7 @@ public abstract class AJoinPoint extends JoinPoint {
         attributes.add("code");
         attributes.add("children");
         attributes.add("descendants");
+        attributes.add("psiElement");
     }
 
     /**
@@ -428,6 +429,29 @@ public abstract class AJoinPoint extends JoinPoint {
         	return result!=null?result:getUndefinedValue();
         } catch(Exception e) {
         	throw new AttributeException(get_class(), "descendants", e);
+        }
+    }
+
+    /**
+     * Returns the underlying PsiElement of this node
+     */
+    public abstract Object getPsiElementImpl();
+
+    /**
+     * Returns the underlying PsiElement of this node
+     */
+    public final Object getPsiElement() {
+        try {
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "psiElement", Optional.empty());
+        	}
+        	Object result = this.getPsiElementImpl();
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.END, this, "psiElement", Optional.ofNullable(result));
+        	}
+        	return result!=null?result:getUndefinedValue();
+        } catch(Exception e) {
+        	throw new AttributeException(get_class(), "psiElement", e);
         }
     }
 

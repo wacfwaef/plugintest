@@ -116,6 +116,7 @@ public abstract class AMethod extends APsiWeaverJoinPoint {
      */
     protected enum MethodAttributes {
         NAME("name"),
+        PSIELEMENT("psiElement"),
         AST("ast"),
         CODE("code"),
         CHILDREN("children"),

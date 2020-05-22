@@ -256,6 +256,7 @@ public abstract class AClass extends AObjectType {
         NAME("name"),
         QUALIFIEDNAME("qualifiedName"),
         PACKAGE("package"),
+        PSIELEMENT("psiElement"),
         AST("ast"),
         CODE("code"),
         CHILDREN("children"),

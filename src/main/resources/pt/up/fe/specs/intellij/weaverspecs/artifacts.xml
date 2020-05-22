@@ -9,6 +9,7 @@
 		<attribute name="code"  		type="String" tooltip="The source code corresponding to this join point"/>
 		<attribute name="children" 		type="joinpoint[]" tooltip="Returns an array with the children of the node"/>
 		<attribute name="descendants" 	type="joinpoint[]" tooltip="Returns an array with the descendants of the node"/>
+		<attribute name="psiElement" 	type="Object" tooltip="Returns the underlying PsiElement of this node"/>
 
 		<!--
 		<attribute name="numChildren" 	type="Integer" tooltip="Returns the number of children of the node"/>

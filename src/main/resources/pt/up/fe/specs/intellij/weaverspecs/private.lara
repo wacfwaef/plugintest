@@ -1,20 +1,28 @@
 import lara.util.StringSet;
+import lara.JavaInterop;
+
 import weaver.Weaver;
 
 
 aspectdef privategetset
 
-    var message = "";
+    var gets = [];
+    var sets = [];
 
 	//Select calls inside methods
 	select class.method.call end
 	apply
-        if($call.name.startsWith('get'))
-			message += 'Warning! The method: ' + $call.name + ' at line ' + $call.line + ' is energy inefficient \n We recomend the usage of Inline getters and setters.\n';
-		else if($call.name.startsWith('set'))
-			message += 	'Warning! The method: ' + $call.name + ' at line ' + $call.line + ' is energy inefficient \n \t We recomend the usage of Inline getters and setters.\n';
+        if($call.name.startsWith('get')) {
+            gets.push($call.psiElement);
+			//message += 'Warning! The method: ' + $call.name + ' at line ' + $call.line + ' is energy inefficient \n We recomend the usage of Inline getters and setters.\n';
+		}
+		else if($call.name.startsWith('set')) {
+		    sets.push($call.psiElement);
+			//message += 	'Warning! The method: ' + $call.name + ' at line ' + $call.line + ' is energy inefficient \n \t We recomend the usage of Inline getters and setters.\n';
+	    }
 	end
 
-	Weaver.getWeaverEngine().getUserData().setRaw("Message", message);
+	Weaver.getWeaverEngine().getUserData().setRaw("getCalls", JavaInterop.arrayToList(gets));
+	Weaver.getWeaverEngine().getUserData().setRaw("setCalls", JavaInterop.arrayToList(sets));
 
 end

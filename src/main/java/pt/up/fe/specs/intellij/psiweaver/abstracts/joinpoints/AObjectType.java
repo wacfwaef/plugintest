@@ -178,6 +178,7 @@ public abstract class AObjectType extends APsiWeaverJoinPoint {
         NAME("name"),
         QUALIFIEDNAME("qualifiedName"),
         PACKAGE("package"),
+        PSIELEMENT("psiElement"),
         AST("ast"),
         CODE("code"),
         CHILDREN("children"),

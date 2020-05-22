@@ -130,4 +130,9 @@ public abstract class APsiWeaverJoinPoint extends AJoinPoint {
                 .filter(jp -> jp != null)
                 .toArray(size -> new AJoinPoint[size]);
     }
+
+    @Override
+    public Object getPsiElementImpl() {
+        return getNode();
+    }
 }

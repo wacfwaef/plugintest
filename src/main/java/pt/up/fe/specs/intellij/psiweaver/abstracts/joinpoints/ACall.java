@@ -103,6 +103,7 @@ public abstract class ACall extends APsiWeaverJoinPoint {
      */
     protected enum CallAttributes {
         NAME("name"),
+        PSIELEMENT("psiElement"),
         AST("ast"),
         CODE("code"),
         CHILDREN("children"),

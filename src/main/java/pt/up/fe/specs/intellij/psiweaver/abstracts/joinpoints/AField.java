@@ -103,6 +103,7 @@ public abstract class AField extends APsiWeaverJoinPoint {
      */
     protected enum FieldAttributes {
         TYPE("type"),
+        PSIELEMENT("psiElement"),
         AST("ast"),
         CODE("code"),
         CHILDREN("children"),

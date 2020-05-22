@@ -77,6 +77,15 @@
                },
                {
                   "type": "attribute",
+                  "tooltip": "Returns the underlying PsiElement of this node",
+                  "children": [
+                           {
+                              "type": "Object",
+                              "name": "psiElement"
+                           }]
+               },
+               {
+                  "type": "attribute",
                   "tooltip": "a String with the type of the join point",
                   "children": [
                            {
@@ -308,6 +317,15 @@
                            {
                               "type": "int",
                               "name": "line"
+                           }]
+               },
+               {
+                  "type": "attribute",
+                  "tooltip": "Returns the underlying PsiElement of this node",
+                  "children": [
+                           {
+                              "type": "Object",
+                              "name": "psiElement"
                            }]
                },
                {
@@ -566,6 +584,15 @@
                },
                {
                   "type": "attribute",
+                  "tooltip": "Returns the underlying PsiElement of this node",
+                  "children": [
+                           {
+                              "type": "Object",
+                              "name": "psiElement"
+                           }]
+               },
+               {
+                  "type": "attribute",
                   "tooltip": "a String with the type of the join point",
                   "children": [
                            {
@@ -809,6 +836,15 @@
                            {
                               "type": "int",
                               "name": "line"
+                           }]
+               },
+               {
+                  "type": "attribute",
+                  "tooltip": "Returns the underlying PsiElement of this node",
+                  "children": [
+                           {
+                              "type": "Object",
+                              "name": "psiElement"
                            }]
                },
                {
@@ -1064,6 +1100,15 @@
                },
                {
                   "type": "attribute",
+                  "tooltip": "Returns the underlying PsiElement of this node",
+                  "children": [
+                           {
+                              "type": "Object",
+                              "name": "psiElement"
+                           }]
+               },
+               {
+                  "type": "attribute",
                   "tooltip": "a String with the type of the join point",
                   "children": [
                            {
@@ -1301,6 +1346,15 @@
                            {
                               "type": "int",
                               "name": "line"
+                           }]
+               },
+               {
+                  "type": "attribute",
+                  "tooltip": "Returns the underlying PsiElement of this node",
+                  "children": [
+                           {
+                              "type": "Object",
+                              "name": "psiElement"
                            }]
                },
                {
@@ -1560,6 +1614,15 @@
                            {
                               "type": "int",
                               "name": "line"
+                           }]
+               },
+               {
+                  "type": "attribute",
+                  "tooltip": "Returns the underlying PsiElement of this node",
+                  "children": [
+                           {
+                              "type": "Object",
+                              "name": "psiElement"
                            }]
                },
                {
